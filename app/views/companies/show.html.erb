@@ -5,9 +5,13 @@
   <%= @company.name %>
 </p>
 
+<ul id="reclamo">
 <%= render 'complaints/form', complaint: @complaint, company: @company %>
 <% @company.complaints.order(created_at: :desc).each do |complaint| %>
+  <li><%= complaint.content %>
+  <%= complaint.user.email %></li>
 <% end %>
+</ul>
 
 
 <%= link_to 'Edit', edit_company_path(@company) %> |
