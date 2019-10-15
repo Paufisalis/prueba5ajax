@@ -15,7 +15,13 @@
  */
  a.nav-link {
     color: white;
+
   }
+
+  a.element.style {
+      padding-top: 8px;
+  }
+
  h2 {
    margin-top: 50px;
    margin-bottom: 20px;

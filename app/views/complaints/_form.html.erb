@@ -1,4 +1,4 @@
-<%= form_with(model: [company,complaint]) do |form| %>
+<%= form_with(model: complaint, url: company_complaints_url(company.id)) do |form| %>
 
   <% if complaint.errors.any? %>
     <div id="error_explanation">
