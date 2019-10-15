@@ -1,4 +1,5 @@
-<%= form_with(model: complaint) do |form| %>
+<%= form_with(model: [company,complaint]) do |form| %>
+
   <% if complaint.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(complaint.errors.count, "error") %> prohibited this complaint from being saved:</h2>
