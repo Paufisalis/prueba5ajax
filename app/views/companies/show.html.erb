@@ -5,5 +5,10 @@
   <%= @company.name %>
 </p>
 
+<%= render 'complaints/form', complaint: @complaint, company: @company %>
+<% @company.complaints.order(created_at: :desc).each do |complaint| %>
+<% end %>
+
+
 <%= link_to 'Edit', edit_company_path(@company) %> |
 <%= link_to 'Back', companies_path %>
