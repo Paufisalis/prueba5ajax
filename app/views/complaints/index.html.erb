@@ -2,8 +2,8 @@
 
 <h1>Complaints</h1>
 
-<table>
-  <thead>
+<table class="table">
+   <thead class="thead-dark">
     <tr>
       <th>User</th>
       <th>Company</th>
@@ -18,9 +18,9 @@
         <td><%= complaint.user_id %></td>
         <td><%= complaint.company_id %></td>
         <td><%= complaint.content %></td>
-        <td><%= link_to 'Show', complaint %></td>
-        <td><%= link_to 'Edit', edit_complaint_path(complaint) %></td>
-        <td><%= link_to 'Destroy', complaint, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', complaint, class:"btn btn-info" %></td>
+        <td><%= link_to 'Edit', edit_complaint_path(complaint), class:"btn btn-primary" %></td>
+        <td><%= link_to 'Destroy', complaint, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-dark" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Complaint', new_complaint_path %>
+<%= link_to 'New Complaint', new_complaint_path, class:"btn btn-secondary" %>

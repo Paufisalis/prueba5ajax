@@ -2,8 +2,8 @@
 
 <h1>Companies</h1>
 <%= render 'form', company:@company %>
-<table>
-  <thead>
+<table class="table">
+   <thead class="thead-dark">
     <tr>
       <th>Name</th>
       <th colspan="3"></th>
@@ -16,6 +16,7 @@
 </table>
 
 <br>
+
 
 <div class="modal" tabindex="-1" role="dialog" id="myModal">
   <div class="modal-dialog" role="document">
@@ -37,4 +38,5 @@
   </div>
 </div>
 
-<%= link_to 'New Company', new_company_path %>
+
+<%= link_to 'New Company', new_company_path, class:"btn btn-secondary"  %>
